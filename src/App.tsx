@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import QuestionsCard from './components/QuestionsCard';
-import { fetchQuizQuestions, Difficulty } from './Api';
+import { fetchQuizQuestions, Difficulty, Question } from './Api';
 import './App.css';
 
 type AnswerObject = {
@@ -12,7 +12,7 @@ type AnswerObject = {
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [questions, setQuestions] = useState([]);
+  const [questions, setQuestions] = useState<Question[]>([]);
   const [number, setNumber] = useState(0);
   const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
   const [score, setScore] = useState(0);
@@ -82,7 +82,7 @@ function App() {
       )}
       {!gameOver && <p className='score'>Score: {score}</p>}
       {loading && <p>Loading questions...</p>}
-      {!loading && !gameOver && (
+      {!loading && !gameOver && questions.length > 0 && number < questions.length && (
         <QuestionsCard
           questionsNum={number + 1}
           totalQuestions={TOTAL_QUESTIONS}

@@ -1,0 +1,175 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #FFF;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.startTrivia,
+.next {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.startTrivia {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.next {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.score {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.questions-card {
+  border-radius: 50px;
+  width: 800px;
+  background-color:transparent;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-wrapper{
+ display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: space-between;
+
+}
+
+.number {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.questions {
+  padding: 20px;
+  border-radius: 50px;
+  border: 3px solid white;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 350px;
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  color: #FFF;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+button:hover{
+  background-color: #28a745;
+  color: #fefefe;
+}
+
+button.correct {
+  background-color: #28a745;
+  color: #fff;
+}
+
+button.incorrect {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+button.correct:hover {
+  opacity: 0.8;
+}
+
+button.incorrect:hover {
+  opacity: 0.8;
+}
+
+.showResults {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.showResults:hover {
+  background-color: #0056b3;
+}
+
+/* Modal */
+.modal {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: relative;
+  box-shadow:  1px 2px 5px #352262;
+  width: 400px;
+  height: 200px;
+  background-color:#352262;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content p {
+  margin: 10px 0;
+}
